@@ -18,13 +18,14 @@ function CustomTable() {
 
 
     return (
-        <Table className="shadow" striped bordered hover variant="dark"  >
+        <Table className="shadow" striped  hover variant="dark"  >
             <thead>
                 <tr>
                     <th>#</th>
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Email</th>
+                    <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,6 +37,9 @@ function CustomTable() {
                         <td>{user.firstname}</td>
                         <td>{user.lastname}</td>
                         <td>{user.email}</td>
+                        <td>
+                        <button className="btn btn-primary mx-2">View</button>
+                        </td>
                     </tr>
                 ))
                 }
