@@ -1,35 +1,45 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios';
 import { Table } from 'react-bootstrap'
-
 function CustomTable() {
+    const [users, setUsers] = useState([]);
+
+    useEffect(() => {
+        loadUsers();
+    }, []);
+
+
+    const loadUsers = async () => {
+        const result = await axios.get("http://localhost:8080/users");
+        setUsers(result.data);
+        console.log(result.data);
+        
+    };
+
+
     return (
-        <Table striped bordered hover variant="dark">
+        <Table className="shadow" striped bordered hover variant="dark"  >
             <thead>
                 <tr>
                     <th>#</th>
                     <th>First Name</th>
                     <th>Last Name</th>
-                    <th>Username</th>
+                    <th>Email</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td colSpan={2}>Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
+                {users.map((user, index) => (
+                    <tr key={user.id}>
+                        <th scope="row" key={index}>
+                            {index + 1}
+                        </th>
+                        <td>{user.firstname}</td>
+                        <td>{user.lastname}</td>
+                        <td>{user.email}</td>
+                    </tr>
+                ))
+                }
+
             </tbody>
         </Table>
     )

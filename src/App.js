@@ -10,8 +10,8 @@ function App() {
     <Fragment>
       
       <Header></Header>
-      <Home></Home>
-    </Fragment>
+      <Home/>
+          </Fragment>
   );
 }
 
