@@ -12,7 +12,7 @@ function App() {
       <BrowserRouter>
         <Header/>
         <Routes>
-          <Route exact path="/home" element={<Home/>} />
+          <Route exact path="/home" element={<Home/>}/>
           <Route exact path="/" element={<Home/>} />
           <Route exact path="/AboutAxpo" element={<AboutAxpo />} />
         </Routes>

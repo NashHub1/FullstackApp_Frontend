@@ -1,13 +1,10 @@
-import React, { Fragment } from "react";
 import classes from "../Styles/Header.module.css";
 import logoAxpo from "../Logos/Axpo_logo.png";
-import { Button } from "react-bootstrap";
-import { faAlignLeft } from "@fortawesome/free-solid-svg-icons";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Nav, NavItem, NavLink } from "react-bootstrap";
 import {
   faHome,
-  faRightFromBracket,
   faBriefcase,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation } from "react-router-dom";

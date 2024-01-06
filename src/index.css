@@ -11,6 +11,7 @@
 :root {
   --color-light-blue: #0467bc; 
   --color-blue: #213555;
+  --color-violet: #555fb3;
   --color-red: #fa3c3c;
   --color-orange: #fcb045;
   --color-gradient-one: linear-gradient(90deg, rgba(58,60,180,1) 8%, rgba(253,29,29,1) 65%, rgba(252,176,69,1) 100%);
