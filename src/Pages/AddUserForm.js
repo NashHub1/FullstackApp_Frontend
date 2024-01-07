@@ -4,6 +4,15 @@ function AddUserForm(props) {
 
     const submitHandler = (event) => {
         event.preventDefault();
+
+        // Die Fehler Meldung muss noch schön eingefügt werden/ und nicht nur in der Console
+        if (event.target.firstname.value.trim().length === 0 || 
+        event.target.lastname.value.trim().length === 0 || 
+        event.target.email.value.trim().length === 0) {
+            	console.log("Bitte bei allen Feldern etwas eingeben")
+                return;
+        }
+
         const formData = {
             firstname: event.target.firstname.value,
             lastname: event.target.lastname.value,
