@@ -5,7 +5,7 @@ import Home from './Pages/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-
+//Keine Änderung 
 function App() {
   return (
     <div className="App">
